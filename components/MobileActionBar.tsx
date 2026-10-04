@@ -1,0 +1,1 @@
+export default function MobileActionBar(){return <div className="mobileActions"><a href="tel:+32487258128">Bel ons</a><a href="https://www.google.com/maps/search/?api=1&query=Weerstandlaan+46+2660+Hoboken" target="_blank">Route</a><a href="/contact#uren">Openingsuren</a></div>}

@@ -1,0 +1,4 @@
+'use client';
+import Link from 'next/link'; import {useState} from 'react';
+const nav=[['Home','/'],['Assortiment','/assortiment'],['BBQ & Schotels','/bbq-schotels'],['Over ons','/over-ons'],['Contact','/contact']];
+export default function Header(){const [open,setOpen]=useState(false);return <header className="header"><div className="navWrap"><Link href="/" className="brand"><span>SLAGERIJ BOUZIAN</span><small>SINDS 2001</small></Link><nav className="desktopNav">{nav.map(([n,h])=><Link key={h} href={h}>{n}</Link>)}</nav><a className="goldButton desktopCall" href="tel:+32487258128">Bel ons</a><button className="menuButton" onClick={()=>setOpen(!open)} aria-label="Menu">{open?'×':'☰'}</button></div>{open&&<nav className="mobileMenu">{nav.map(([n,h])=><Link onClick={()=>setOpen(false)} key={h} href={h}>{n}</Link>)}<a href="tel:+32487258128">Bel ons</a></nav>}</header>}
